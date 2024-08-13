@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Dokyumento"
+version = "1.0.0"
+description = "Dokyumento is a simple Markdown documentation generator for many popular programming languages. Easily extensible and easy to use."
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/sebidev/Dokyumento"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dokyumento", "dokyumento.*"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"

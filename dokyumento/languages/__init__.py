@@ -2,15 +2,17 @@
 
 from .c_cpp_parser import CCppParser
 from .javascript_parser import JavaScriptParser
+from .typescript_parser import TypeScriptParser
 from .go_parser import GoParser
 from .rust_parser import RustParser
-from .python_parser import PythonParser  # Falls du einen Python-Parser hast
-from .swift_parser import SwiftParser  # Falls du einen Swift-Parser hinzugefügt hast
+from .python_parser import PythonParser 
+from .swift_parser import SwiftParser 
 
-# Exportiere alle Parser für einfacheren Zugriff
+
 __all__ = [
     'CCppParser',
     'JavaScriptParser',
+    'TypeScriptParser',
     'GoParser',
     'RustParser',
     'PythonParser',

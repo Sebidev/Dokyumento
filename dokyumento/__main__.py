@@ -1,11 +1,12 @@
 import os
 import sys
-from languages.c_cpp_parser import CCppParser
-from languages.javascript_parser import JavaScriptParser
-from languages.typescript_parser import TypeScriptParser
-from languages.go_parser import GoParser
-from languages.rust_parser import RustParser
-from languages.swift_parser import SwiftParser
+from dokyumento.languages.c_cpp_parser import CCppParser
+from dokyumento.languages.javascript_parser import JavaScriptParser
+from dokyumento.languages.typescript_parser import TypeScriptParser
+from dokyumento.languages.go_parser import GoParser
+from dokyumento.languages.rust_parser import RustParser
+from dokyumento.languages.python_parser import PythonParser
+from dokyumento.languages.swift_parser import SwiftParser
 
 PARSERS = {
     '.c': CCppParser,
@@ -33,6 +34,7 @@ def scan_directory(directory):
                 if comments:
                     output_to_markdown(filepath, comments)
 
+
 def output_to_markdown(filepath, comments):
     """Writes the extracted comments to a Markdown file."""
     directory = os.path.dirname(filepath)
@@ -48,9 +50,10 @@ def output_to_markdown(filepath, comments):
     except Exception as e:
         print(f"Error writing markdown file: {e}")
 
+
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python dokyumento.py <directory>")
+        print("Usage: python -m dokyumento <directory>")
         sys.exit(1)
 
     directory = sys.argv[1]

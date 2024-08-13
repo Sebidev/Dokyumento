@@ -22,8 +22,20 @@ Dokyumento is a simple Markdown documentation generator for many popular program
 
 Ensure you have Python 3.6 or higher installed. You can clone the project directly from GitHub and run the necessary files.
 
-```sh
+```
 git clone https://github.com/sebidev/Dokyumento.git
+```
+```
 cd Dokyumento
-python Dokyumento.py <directory>
+```
+```
+python -m venv yourenv && source yourenv/bin/activate 
+```
+```
+pip install .
+```
+
+## Use
+```
+python -m dokyumento <directory>
 ```
